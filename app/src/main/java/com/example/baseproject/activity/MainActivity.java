@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText edtName;
     private RadioGroup radioGroup;
     private RadioButton radioBtnWork, radioBtnBusi, radioBtnGame;
+    private OEMDirector oemDirector = new OEMDirector();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,16 +62,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void createGamingLaptop() {
         String inName = edtName.getText().toString();
-        OEMDirector oemDirector = new OEMDirector();
+
 
         GamingLaptopBuilder gamingLaptopBuilder = new GamingLaptopBuilder();
-        oemDirector.createLaptopWorkstation(gamingLaptopBuilder);
+        oemDirector.createLaptopGaming(gamingLaptopBuilder);
 
         Laptop gamingLaptop = gamingLaptopBuilder.build();
         gamingLaptop.setName(inName);
 
         DataManage.getInstance().setLaptop(gamingLaptop);
-//        startActivity(new Intent(this, DisplayDataActivity.class));
     }
 
     private void createBusinessLaptop() {
@@ -78,13 +78,12 @@ public class MainActivity extends AppCompatActivity {
         OEMDirector oemDirector = new OEMDirector();
 
         BusinessLaptopBuilder businessLaptopBuilder = new BusinessLaptopBuilder();
-        oemDirector.createLaptopWorkstation(businessLaptopBuilder);
+        oemDirector.createLaptopBusiness(businessLaptopBuilder);
 
         Laptop businessLaptop = businessLaptopBuilder.build();
         businessLaptop.setName(inName);
 
         DataManage.getInstance().setLaptop(businessLaptop);
-//        startActivity(new Intent(this, DisplayDataActivity.class));
     }
 
     private void createWorkstationLaptop() {
@@ -98,8 +97,6 @@ public class MainActivity extends AppCompatActivity {
         workstationLaptop.setName(inName);
 
         DataManage.getInstance().setLaptop(workstationLaptop);
-//        startActivity(new Intent(this, DisplayDataActivity.class));
-//        String name = DataManage.getInstance().getLaptop().getName();
     }
 
 }

@@ -6,7 +6,6 @@ public class Laptop {
     private Screen screen;
     private Price price;
     private Card card;
-    private int img;
 
 
     public String getName() {
@@ -41,19 +40,12 @@ public class Laptop {
         this.card = card;
     }
 
-    public int getImg() {
-        return img;
-    }
-
-    public void setImg(int img) {
-        this.img = img;
-    }
 
     @Override
     public String toString() {
-        return "name = " + name  +'\n'+
-                "screen  = " + screen.getSize() +'\n'+
-                "price = " + price.getPrice() +'\n'+
-                "card = " + card;
+        return "name : " + name + '\n' +
+                "screen : " + screen.getSize() + " inch" + '\n' +
+                "price : " + price.getPrice() + " VND" + '\n' +
+                "card : " + card;
     }
 }

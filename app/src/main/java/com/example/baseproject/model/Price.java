@@ -1,18 +1,18 @@
 package com.example.baseproject.model;
 
 public class Price {
-    private double price;
+    private long price;
 
 
-    public Price(double price) {
+    public Price(long price) {
         this.price = price;
     }
 
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
