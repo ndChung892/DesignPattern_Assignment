@@ -1,14 +1,14 @@
 package com.example.baseproject.builder;
 
-import com.example.baseproject.car.Car;
-import com.example.baseproject.car.CarType;
-import com.example.baseproject.car.Engine;
+
+import com.example.baseproject.model.Card;
+import com.example.baseproject.model.Price;
+import com.example.baseproject.model.Screen;
 
 public interface Builder {
-//    void createSportCar();
-//    void createSUVCar();
-//    void createTruckCar();
-    void setSeats(int seats);
-    void setEngine(Engine engine);
-    void setCarType(CarType carType);
+    void setName(String name);
+    void setScreen(Screen screen);
+    void setPrice(Price price);
+    void setCard(Card card);
+
 }
